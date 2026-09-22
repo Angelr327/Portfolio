@@ -1,11 +1,11 @@
-import heroImage from "../assets/hero.png";
+import heroImage from "../assets/angel.jpg";
 
 export default function Hero() {
     return (
         <section className="hero">
 
             <div className="hero-image">
-                <img src="./src/assets/angel.jpg" alt="Angel Rodriguez" />
+                <img src={heroImage} alt="Angel Rodriguez" />
             </div>
 
             <div className="hero-text">

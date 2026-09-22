@@ -32,7 +32,9 @@ export default function Navbar() {
                         GitHub
                     </a>
 
-                    <a href="./src/assets/resume/Angel_s_Resume.pdf">Resume</a>
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                        Resume
+                    </a>
                 </div>
 
             </nav>
