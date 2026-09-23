@@ -1,4 +1,5 @@
 import { useState } from "react";
+import dslImage from "../assets/projects/DSL.png";
 
 const projects = [
     {
@@ -7,7 +8,7 @@ const projects = [
         description:
             "An AI-driven platform for humanitarian funding analysis. The application analyzes humanitarian datasets, computes funding gaps and crisis metrics, and provides an interactive dashboard with an AI assistant for data exploration.",
         technologies: ["Python", "FastAPI", "React", "SQL"],
-        image: "./src/assets/projects/dsl.png",
+        image: dslImage,
         link: "https://devpost.com/software/data-saves-lives-dsl"
     },
 
