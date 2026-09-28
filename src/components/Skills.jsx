@@ -27,6 +27,7 @@ const skillCategories = [
         title: "Developer Tools",
         skills: [
             "Git",
+            "Linux",
             "VS Code",
             "Visual Studio",
             "PyCharm",
@@ -36,9 +37,11 @@ const skillCategories = [
     {
         title: "AI Tools",
         skills: [
+            "Yolo",
             "Claude",
             "Codex",
             "Cursor",
+            "Gemini",
             "RAG"
         ]
     }

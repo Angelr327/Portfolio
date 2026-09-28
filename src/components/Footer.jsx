@@ -37,7 +37,7 @@ export default function Footer() {
                         LinkedIn
                     </a>
 
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="/Angel_resume.pdf" target="_blank" rel="noopener noreferrer">
                         Resume
                     </a>
                 </div>

@@ -999,6 +999,10 @@
 
 /* Clickable project image */
 
+.project-media {
+    position: relative;
+}
+
 .project-image-link {
     display: block;
 
@@ -1036,6 +1040,70 @@
     transform: scale(1.03);
 
     filter: brightness(1.1);
+}
+
+.project-carousel-button {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+    padding: 0 0 4px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    background: rgba(10, 10, 18, 0.72);
+    color: white;
+
+    font: inherit;
+    font-size: 2rem;
+    line-height: 1;
+
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background 0.2s ease, border-color 0.2s ease, scale 0.2s ease;
+}
+
+.project-carousel-button:hover,
+.project-carousel-button:focus-visible {
+    border-color: rgba(192, 132, 252, 0.9);
+    background: rgba(88, 28, 135, 0.9);
+    scale: 1.08;
+}
+
+.project-carousel-button:focus-visible {
+    outline: 2px solid #c084fc;
+    outline-offset: 3px;
+}
+
+.project-carousel-button.previous {
+    left: 14px;
+}
+
+.project-carousel-button.next {
+    right: 14px;
+}
+
+.project-carousel-count {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+    z-index: 2;
+
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+
+    background: rgba(10, 10, 18, 0.72);
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
 
@@ -1127,6 +1195,11 @@
 
     .project-image-link img {
         height: 220px;
+    }
+
+    .project-carousel-button {
+        width: 38px;
+        height: 38px;
     }
 
     .project-info h3 {
