@@ -5,8 +5,8 @@ export default function Footer() {
             <div className="footer-container">
 
                 <div className="footer-left">
-                    <a href="/" className="footer-logo">
-                        arodriguez.dev
+                    <a href="#top" className="footer-logo">
+                        angelrod.work
                     </a>
                 </div>
 
@@ -15,7 +15,7 @@ export default function Footer() {
                         Made by Angel
                     </p>
 
-                    <a href="#" className="back-to-top">
+                    <a href="#top" className="back-to-top">
                         Back to top
                     </a>
                 </div>

@@ -11,38 +11,35 @@ const skillCategories = [
         ]
     },
     {
-        title: "Frameworks & Libraries",
+        title: "Frameworks & Data",
         skills: [
-            "Flask",
-            "FastAPI",
             "React",
+            "FastAPI",
             "Node.js",
+            "SQLite",
             "Pandas",
-            "OpenCV",
-            "PyTorch",
             "Tailwind CSS"
+        ]
+    },
+    {
+        title: "AI",
+        skills: [
+            "PyTorch",
+            "OpenCV",
+            "YOLO",
+            "RAG",
+            "Gemini",
+            "Claude Code",
+            "Codex"
         ]
     },
     {
         title: "Developer Tools",
         skills: [
-            "Git",
             "Linux",
-            "VS Code",
-            "Visual Studio",
-            "PyCharm",
-            "Eclipse"
-        ]
-    },
-    {
-        title: "AI Tools",
-        skills: [
-            "Yolo",
-            "Claude",
-            "Codex",
-            "Cursor",
-            "Gemini",
-            "RAG"
+            "Git",
+            "Vercel",
+            "VS Code"
         ]
     }
 ];

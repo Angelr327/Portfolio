@@ -2,7 +2,7 @@ import heroImage from "../assets/angel.jpg";
 
 export default function Hero() {
     return (
-        <section className="hero">
+        <section id="top" className="hero">
 
             <div className="hero-image">
                 <img src={heroImage} alt="Angel Rodriguez" />
@@ -10,15 +10,17 @@ export default function Hero() {
 
             <div className="hero-text">
 
-                <p>Hey, I'm Angel.</p>
+                <p className="hero-eyebrow">Hey, I’m Angel Rodriguez.</p>
 
-                <h1>Computer Science @ UCF</h1>
+                <h1>Building software for the real world.</h1>
 
-                <h2>Software Engineer</h2>
+                <h2>Computer Science at UCF · Software Engineer</h2>
+
+                <p className="hero-summary">I build useful systems across web, AI, and hardware—from humanitarian data tools to safer cycling technology.</p>
 
                 <a href="#experience" className="learn-more">
                     Learn more about me
-                    <span>↓</span>
+                    <span aria-hidden="true">↓</span>
                 </a>
 
             </div>

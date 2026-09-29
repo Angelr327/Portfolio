@@ -11,40 +11,28 @@ const experiences = [
         image: minoriaLogo,
         bullets: [
             <>
-                Developed a suite of <span className="highlight">RESTful APIs using FastAPI and SQL</span>,
-                replacing third-party CRM dependencies and improving <span className="highlight">system control and scalability</span>.
+                Designed <span className="highlight">authentication systems and database architecture</span> supporting CRM workflows for enterprise clients including Lockheed Martin, Dell, and Red Hat.
             </>,
             <>
-                Designed and implemented <span className="highlight">authentication and database architecture</span>
-                for enterprise clients including <span className="highlight">Lockheed Martin, Dell, and Red Hat</span>.
+                Developed <span className="highlight">RESTful APIs with FastAPI and SQL</span>, replacing third-party CRM dependencies and improving system control and scalability.
             </>,
             <>
-                Collaborated in a <span className="highlight">Git-based team environment</span>,
-                contributing to code reviews and API design documentation to ensure maintainability and efficient onboarding.
+                Collaborated in a <span className="highlight">Git-based team</span>, contributing to code reviews and API design documentation for maintainability and efficient onboarding.
             </>
         ]
     },
 
     {
         date: "Jan 2026 — Mar 2026",
-        company: "NASA L'SPACE",
+        company: "NASA L’SPACE",
         title: "NPWEE Member",
         image: nasaLogo,
         bullets: [
             <>
-                Selected for NASA's competitive <span className="highlight">L'SPACE program</span>,
-                contributing to a mission proposal focused on <span className="highlight">low-temperature Sabatier reactors</span>
-                for Mars ISRU fuel production.
+                Selected for NASA’s competitive <span className="highlight">L’SPACE program</span>, contributing to a mission proposal focused on low-temperature Sabatier reactors for Mars ISRU fuel production.
             </>,
             <>
-                Collaborated on the design of a <span className="highlight">Nickel-Manganese catalyst system</span>
-                to convert CO2 and H2 into methane (CH4), targeting a reduction in operating temperature
-                from <span className="highlight">~400°C to ~250°C</span>.
-            </>,
-            <>
-                Contributed to technical analysis and documentation evaluating
-                <span className="highlight"> CO2 conversion efficiency, catalyst performance, and cost reduction</span>
-                to support long-duration Mars mission sustainability.
+                Collaborated on a <span className="highlight">nickel–manganese catalyst system</span> to convert CO₂ and H₂ into methane, targeting an operating temperature reduction from approximately 400°C to 250°C.
             </>
         ]
     },
@@ -56,16 +44,13 @@ const experiences = [
         image: botballLogo,
         bullets: [
             <>
-                Led programming team of <span className="highlight">10</span> for an autonomous robot using
-                <span className="highlight"> C and KIPR Wombat Controller</span>, enabling full task automation in competition scenarios.
+                Led a <span className="highlight">10-person programming team</span> for an autonomous robot using C and the KIPR Wombat Controller, enabling full task automation in competition scenarios.
             </>,
             <>
-                Integrated <span className="highlight">sensors, camera vision, servos, and motor control systems</span>
-                to achieve <span className="highlight">75% task success rate</span> in autonomous navigation and object manipulation challenges.
+                Integrated <span className="highlight">sensors, camera vision, servos, and motor controls</span> to achieve a 75% task success rate in autonomous navigation and object manipulation challenges.
             </>,
             <>
-                Developed and tested <span className="highlight">modular C code</span> for obstacle navigation
-                and object handling, improving execution consistency and reliability across competition runs.
+                Developed and tested <span className="highlight">modular C code</span> for obstacle navigation and object handling, improving consistency across competition runs.
             </>
         ]
     }
@@ -80,8 +65,8 @@ export default function Experience() {
 
             <div className="experience-list">
 
-                {experiences.map((experience, index) => (
-                    <div className="experience-card" key={index}>
+                {experiences.map((experience) => (
+                    <article className="experience-card" key={experience.company}>
 
                         <div className="experience-date">
                             {experience.date}
@@ -112,7 +97,7 @@ export default function Experience() {
 
                         </div>
 
-                    </div>
+                    </article>
                 ))}
 
             </div>

@@ -4,12 +4,12 @@ export default function Navbar() {
             <nav className="navbar-container">
 
                 <div className="navbar-left">
-                    <a href="/" className="logo">
-                        arodriguez.dev
+                    <a href="#top" className="logo">
+                        angelrod.work
                     </a>
                 </div>
 
-                <div className="navbar-center">
+                <div className="navbar-center" aria-label="Sections">
                     <a href="#experience">Experience</a>
                     <a href="#projects">Projects</a>
                     <a href="#skills">Skills</a>
@@ -32,7 +32,7 @@ export default function Navbar() {
                         GitHub
                     </a>
 
-                    <a href="/Angel_resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <a className="nav-resume" href="/Angel_resume.pdf" target="_blank" rel="noopener noreferrer">
                         Resume
                     </a>
                 </div>
