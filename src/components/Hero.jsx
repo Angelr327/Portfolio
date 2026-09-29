@@ -16,8 +16,6 @@ export default function Hero() {
 
                 <h2>Computer Science at UCF · Software Engineer</h2>
 
-                <p className="hero-summary">I build useful systems across web, AI, and hardware—from humanitarian data tools to safer cycling technology.</p>
-
                 <a href="#experience" className="learn-more">
                     Learn more about me
                     <span aria-hidden="true">↓</span>
