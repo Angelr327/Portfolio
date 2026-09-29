@@ -1,9 +1,27 @@
 import minoriaLogo from "../assets/minoriatech.webp";
 import nasaLogo from "../assets/lspace.jpg";
 import botballLogo from "../assets/robotics.webp";
+import knightHacksLogo from "../assets/knight-hacks.jpeg";
 
 
 const experiences = [
+    {
+        date: "Aug 2026 — Present",
+        company: "Knight Hacks",
+        title: "Kickstart Mentee",
+        image: knightHacksLogo,
+        bullets: [
+            <>
+                Member of <span className="highlight">UCF’s largest software engineering club</span>, which hosts UCF’s official hackathon.
+            </>,
+            <>
+                Participate in the <span className="highlight">Kickstart mentorship program</span> alongside four other mentees, guided by mentor Jason Sacerio.
+            </>,
+            <>
+                Attend <span className="highlight">hackathons and workshops</span>, build technical experience through Knight Hacks projects, and connect with other developers.
+            </>
+        ]
+    },
     {
         date: "Jan 2026 — Apr 2026",
         company: "Minoria Tech",

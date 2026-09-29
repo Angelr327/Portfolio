@@ -109,7 +109,7 @@
 
 .navbar a:hover, .footer a:hover { color: var(--accent); }
 
-.hero, .experience, .projects, .skills {
+.hero, .experience, .projects, .blog, .skills {
     width: min(calc(100% - 48px), var(--page-width));
     margin-inline: auto;
 }
@@ -187,10 +187,10 @@
     transform: translateY(-2px);
 }
 
-.experience, .projects, .skills { padding-block: 62px 42px; }
+.experience, .projects, .blog, .skills { padding-block: 62px 42px; }
 .skills { padding-bottom: 120px; }
 
-.experience > h2, .projects > h2, .skills > h2 {
+.experience > h2, .projects > h2, .blog > h2, .skills > h2 {
     margin: 0 0 40px;
     background: linear-gradient(90deg, #fff, #c8a2ff);
     background-clip: text;
@@ -367,6 +367,58 @@
 .project-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; color: var(--accent); font-size: 0.92rem; font-weight: 650; }
 .project-link:hover { color: #ead8ff; }
 
+.blog-intro {
+    max-width: 680px;
+    margin: -19px auto 32px;
+    color: var(--muted);
+    line-height: 1.65;
+    text-align: center;
+}
+
+.blog-list { display: grid; gap: 22px; }
+.blog-card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(24px, 4vw, 38px);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.16), inset 0 1px rgba(255, 255, 255, 0.035);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+.blog-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: linear-gradient(#8b5cf6, #d8b4fe, transparent);
+}
+.blog-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin-bottom: 14px; font-size: 0.86rem; }
+.blog-event { color: var(--accent); font-weight: 700; }
+.blog-meta time { color: var(--muted); }
+.blog-card h3 { margin: 0 0 14px; color: var(--text); font-size: clamp(1.35rem, 2.6vw, 1.8rem); line-height: 1.25; letter-spacing: -0.025em; }
+.blog-card > p, .blog-learning p { margin: 0; color: var(--muted); line-height: 1.7; }
+.blog-gallery { margin: 24px 0 0; }
+.blog-photo-stage { position: relative; display: grid; place-items: center; overflow: hidden; height: clamp(240px, 38vw, 390px); border: 1px solid var(--border); border-radius: 14px; background: #12101b; }
+.blog-photo-stage > img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+.blog-photo-backdrop { object-fit: cover; filter: blur(24px) brightness(0.4); transform: scale(1.08); }
+.blog-photo-main { object-fit: contain; }
+.blog-photo-control { position: absolute; z-index: 1; top: 50%; display: grid; place-items: center; width: 42px; height: 42px; padding: 0 0 4px; border: 1px solid rgba(255, 255, 255, 0.45); border-radius: 50%; background: rgba(14, 12, 22, 0.82); color: white; font: inherit; font-size: 2rem; cursor: pointer; transform: translateY(-50%); }
+.blog-photo-control:hover { background: #553585; }
+.blog-photo-control.previous { left: 12px; }
+.blog-photo-control.next { right: 12px; }
+.blog-photo-caption { display: flex; justify-content: space-between; gap: 14px; margin-top: 10px; color: var(--muted); font-size: 0.82rem; }
+.blog-photo-caption span:last-child { white-space: nowrap; }
+.blog-photo-thumbnails { display: flex; gap: 9px; overflow-x: auto; margin-top: 12px; padding: 2px 2px 8px; scrollbar-color: #76618f transparent; }
+.blog-photo-thumbnails button { flex: 0 0 88px; overflow: hidden; height: 62px; padding: 0; border: 2px solid transparent; border-radius: 9px; background: #12101b; cursor: pointer; opacity: 0.7; }
+.blog-photo-thumbnails button:hover, .blog-photo-thumbnails button.active { border-color: var(--accent); opacity: 1; }
+.blog-photo-thumbnails img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.blog-learning { margin-top: 22px; padding: 18px 20px; border: 1px solid rgba(200, 162, 255, 0.18); border-radius: 12px; background: rgba(139, 92, 246, 0.08); }
+.blog-learning h4 { margin: 0 0 8px; color: #e0c5ff; font-size: 0.9rem; }
+.blog-card > a { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; color: var(--accent); font-size: 0.92rem; font-weight: 650; }
+.blog-card > a:hover { color: #ead8ff; }
+
 .skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .skill-category { padding: 28px 30px; }
 .skill-category h3 { margin: 0 0 20px; color: var(--text); font-size: 1.08rem; }
@@ -406,14 +458,16 @@
     .navbar-right .nav-resume { padding: 7px 11px; border: 1px solid var(--border); border-radius: 8px; color: var(--text); }
     .navbar-center { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; gap: 10px; border-top: 1px solid rgba(220, 207, 255, 0.1); }
     .navbar-center a { padding: 8px 0; font-size: 0.87rem; }
-    .hero, .experience, .projects, .skills { width: min(calc(100% - 36px), 600px); }
+    .hero, .experience, .projects, .blog, .skills { width: min(calc(100% - 36px), 600px); }
     .hero { min-height: 0; grid-template-columns: 1fr; justify-items: center; gap: 28px; padding-block: 58px 68px; text-align: center; }
     .hero-image { width: clamp(154px, 43vw, 205px); }
     .hero h1 { font-size: clamp(2.5rem, 9vw, 3.65rem); }
     .hero-summary { margin-inline: auto; }
-    .experience, .projects, .skills { padding-block: 42px 28px; }
+    .experience, .projects, .blog, .skills { padding-block: 42px 28px; }
     .skills { padding-bottom: 76px; }
-    .experience > h2, .projects > h2, .skills > h2 { margin-bottom: 28px; text-align: left; }
+    .experience > h2, .projects > h2, .blog > h2, .skills > h2 { margin-bottom: 28px; text-align: left; }
+    .blog-intro { margin: -12px 0 24px; text-align: left; }
+    .blog-photo-stage { height: clamp(220px, 65vw, 340px); }
     .experience-card { grid-template-columns: 66px minmax(0, 1fr); gap: 6px 15px; padding: 22px; }
     .experience-logo { grid-column: 1; grid-row: 1 / span 2; align-items: center; margin: 0; }
     .experience-logo img { width: 64px; height: 64px; padding: 5px; }
@@ -442,6 +496,7 @@
     .experience-card { padding: 19px; }
     .experience-content h3 { font-size: 1.24rem; }
     .experience-content li { font-size: 0.92rem; }
+    .blog-photo-control { width: 38px; height: 38px; }
     .project-carousel-button { width: 38px; height: 38px; }
     .skills-grid { grid-template-columns: 1fr; }
     .skill-list { gap: 8px; }

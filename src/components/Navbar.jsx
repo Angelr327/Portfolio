@@ -12,6 +12,7 @@ export default function Navbar() {
                 <div className="navbar-center" aria-label="Sections">
                     <a href="#experience">Experience</a>
                     <a href="#projects">Projects</a>
+                    <a href="#blog">Blog</a>
                     <a href="#skills">Skills</a>
                 </div>
 
